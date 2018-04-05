@@ -1,0 +1,17 @@
+{% if userlist %}
+    <ul>
+    {% for user in userlist %}
+        <a>{{ user.username }}</a>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No users are signed up.</p>
+{% endif %}
+
+{% if user.is_authenticated %}
+    <p>Signed in as: {{ user.username }}!!!</p>       
+{% else %}
+    <p>(Not signed in)</p>
+{% endif %}
+
+
